@@ -2,21 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EduManage App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>EduManage School App</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Ensure full viewport height for the app container */
-      html, body, #root {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: #f9fafb;
-      }
-    </style>
   </head>
-  <body>
+  <body class="bg-gray-50">
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- This path must match your file name exactly -->
+    <script type="module">
+      import React from 'https://esm.sh/react@18.2.0';
+      import ReactDOM from 'https://esm.sh/react-dom@18.2.0/client';
+      import App from './App.jsx';
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(React.createElement(App));
+    </script>
   </body>
 </html>
